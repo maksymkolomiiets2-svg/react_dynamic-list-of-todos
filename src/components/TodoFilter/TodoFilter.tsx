@@ -7,7 +7,7 @@ type Props = {
   status: Status;
   onQueryChange: (query: string) => void;
   onStatusChange: (status: Status) => void;
-  onClearSearch: () => void;
+  onClearQuery: () => void;
 };
 
 export const TodoFilter: React.FC<Props> = ({

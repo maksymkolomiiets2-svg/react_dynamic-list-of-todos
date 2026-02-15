@@ -37,6 +37,7 @@ export const App: React.FC = () => {
     if (!selectedTodo) {
       return;
     }
+    setUser(null)
 
     setIsUserLoading(true);
 
@@ -89,6 +90,7 @@ export const App: React.FC = () => {
               {isTodosLoading && <Loader />}
 
               <TodoList
+                className={selectedTodo ? 'has-background-info-light' : ''}
                 todos={isTodosLoading ? [] : visibleTodos}
                 selectedTodoId={selectedTodo?.id ?? null}
                 onTodoSelect={setSelectedTodo}
