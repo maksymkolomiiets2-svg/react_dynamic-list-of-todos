@@ -7,15 +7,17 @@ type Props = {
   todos: Todo[];
   selectedTodoId: number | null;
   onTodoSelect: (todo: Todo | null) => void;
+  className?: string;
 };
 
 export const TodoList: React.FC<Props> = ({
   todos,
   selectedTodoId,
   onTodoSelect,
+  className = '',
 }) => {
   return (
-    <table className="table is-narrow is-fullwidth">
+    <table className={`table is-narrow is-fullwidth ${className}`}>
       <thead>
         <tr>
           <th>#</th>

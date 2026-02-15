@@ -37,7 +37,8 @@ export const App: React.FC = () => {
     if (!selectedTodo) {
       return;
     }
-    setUser(null)
+
+    setUser(null);
 
     setIsUserLoading(true);
 
@@ -65,8 +66,7 @@ export const App: React.FC = () => {
   }, [todos, status, query]);
 
   const closeModal = () => {
-    setSelectedTodo(null);
-    setUser(null);
+    setIsUserLoading(false);
   };
 
   return (
